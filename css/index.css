@@ -44,23 +44,26 @@ header {
         text-align: center;
     }
     .headerCon nav ul {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 5rem;
     }
         .headerCon nav ul li {
             padding: 1rem 2rem 1rem 0;
-            margin: 0 5rem;
             border-bottom: 1px solid rgba(0,0,0,0.15);
         }
-        .headerCon nav ul li:hover a {
-            background-color: #30d6f2;
+        .headerCon nav ul li:hover {
+            cursor: pointer;
             transition: all 180ms;
             border-radius: 0.5rem;
-            color: #e4f9fd;
             transform: scale(1.15);
-            padding: 1rem 1rem;
-            /* border-bottom: 1px solid rgba(255,255,255,0.15); */
         }
+
+@media screen and (max-width: 1440px) {
+    .headerCon nav ul {
+        grid-gap: 3rem;
+    }
+}
 
 /* Hero */
 section.hero {
@@ -113,6 +116,18 @@ section.hero {
         height: 100%;
     }
 
+@media screen and (max-width: 1440px) {
+    article.hero-Img {
+        margin-right: 10rem;
+    }
+    /* article.hero-Img ul li#heroBGLI {
+        right: -25rem;
+    }
+    article.hero-Img ul li#heroBGLI2 {
+        left: -100%;
+    } */
+}
+
 /* Aside */
 aside.feature {
     margin: 5rem 0;
@@ -145,6 +160,9 @@ section.about {
         background-color: #396a73;
         width: 80%;
         padding: 5rem 0;
+    }
+    article.about-Img img {
+        /* width: 100%; */
     }
     .aboutBG {
         position: absolute;
@@ -223,7 +241,7 @@ footer h2, footer a, footer span, footer h3, footer input {color: white;}
 .footerCon {
     display: flex;
     width: 80%;
-    margin: 10rem auto;
+    margin: 10rem auto 2rem auto;
     justify-content: space-between;
     padding: 5rem 0;
 }
@@ -244,7 +262,7 @@ footer h2, footer a, footer span, footer h3, footer input {color: white;}
         margin: 0 1rem;
         border-bottom: 1px solid rgba(255,255,255,0.15);
     }
-    .footerRight h3 {padding-bottom: 4rem;}
+    .footerRight h2 {padding-bottom: 4rem;}
     .footerRight .contactBtn input {
         border: none;
         width: 40rem;
@@ -252,6 +270,8 @@ footer h2, footer a, footer span, footer h3, footer input {color: white;}
         border-bottom: 1px solid rgba(255, 255, 255, 0.15);
         background-color: transparent;
     }
-    div.footerCopy {text-align: center;
-    padding: 4rem 0 2rem 0;}
+    div.footerCopy {
+        text-align: center;
+        padding-bottom: 2rem;
+    }
     span#footerCopy {font-size:1.4rem;}
