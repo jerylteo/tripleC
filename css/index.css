@@ -44,13 +44,17 @@ header {
         text-align: center;
     }
     .headerCon nav ul {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 3rem;
+        justify-content: center;
     }
         .headerCon nav ul li {
-            padding: 1rem 2rem 1rem 0;
-            margin: 0 5rem;
-            border-bottom: 1px solid rgba(0,0,0,0.15);
+            /* border-bottom: 1px solid rgba(0,0,0,0.15); */
+            text-align: center;
+        }
+        .headerCon nav ul li a {
+            padding: 1rem;
         }
         .headerCon nav ul li:hover a {
             background-color: #30d6f2;
@@ -58,7 +62,7 @@ header {
             border-radius: 0.5rem;
             color: #e4f9fd;
             transform: scale(1.15);
-            padding: 1rem 1rem;
+            /* padding: 1rem 1rem; */
             /* border-bottom: 1px solid rgba(255,255,255,0.15); */
         }
 
@@ -129,7 +133,9 @@ aside.feature {
     }
     .featureCon ul li {
         font-style: italic; 
+        font-size: 2.4rem;
         color: rgba(0, 0, 0, 0.5);
+        padding-bottom: 1rem;
         border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     }
 
@@ -165,7 +171,7 @@ section.about {
         width: 80%;
         margin: auto;
     }
-    article.about-Text h2 {padding-bottom: 4rem;}
+    article.about-Text h2 {text-align: center; padding-bottom: 4rem;}
     article.about-Text p {padding-bottom: 4rem;}
     article.about-Text h3#quote, article.about-Text p#quoteAuthor {text-align: center; padding-bottom: 0;}
     article.about-Text h3#quote {font-style: italic; padding-top: 2rem;}
@@ -223,17 +229,17 @@ footer h2, footer a, footer span, footer h3, footer input {color: white;}
 .footerCon {
     display: flex;
     width: 80%;
-    margin: 10rem auto;
+    margin: 10rem auto 5rem auto;
     justify-content: space-between;
-    padding: 5rem 0;
+    padding: 5rem 0 2rem 0;
 }
     .footerLeft {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        /* justify-content: left; */
+        /* align-items: left; */
     }
-    .footerLeft .footer {text-align: center; padding-bottom: 4rem;}
+    .footerLeft .footer {text-align: left; padding-bottom: 4rem;}
     .footerLeft ul{
         display: flex;
         justify-content: space-between;
@@ -243,6 +249,16 @@ footer h2, footer a, footer span, footer h3, footer input {color: white;}
         padding: 1rem 2rem 1rem 0;
         margin: 0 1rem;
         border-bottom: 1px solid rgba(255,255,255,0.15);
+        transition: all 180ms;
+    }
+    .footerLeft ul li:first-child {
+        padding-left: 0;
+        margin-left: 0;
+    }
+    .footerLeft ul li:hover {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        transform: scale(1.05);
+        transition: all 180ms;
     }
     .footerRight h3 {padding-bottom: 4rem;}
     .footerRight .contactBtn input {
@@ -252,6 +268,13 @@ footer h2, footer a, footer span, footer h3, footer input {color: white;}
         border-bottom: 1px solid rgba(255, 255, 255, 0.15);
         background-color: transparent;
     }
-    div.footerCopy {text-align: center;
-    padding: 4rem 0 2rem 0;}
+    .footerRight .contactBtn:hover {
+        border-bottom: 1ps solid rgba(255, 255, 255, 0.5);
+        transform: scale(1.05);
+        transition: all 180ms;
+    }
+    div.footerCopy {
+        text-align: center;
+        padding-bottom: 2rem;
+    }
     span#footerCopy {font-size:1.4rem;}
