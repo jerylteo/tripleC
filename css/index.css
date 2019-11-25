@@ -46,7 +46,7 @@ header {
     .headerCon nav ul {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        grid-gap: 3rem;
+        grid-gap: 1rem;
         justify-content: center;
     }
         .headerCon nav ul li {
@@ -56,7 +56,7 @@ header {
         .headerCon nav ul li a {
             padding: 1rem;
         }
-        .headerCon nav ul li:hover a {
+        .headerCon nav ul li:hover a, #active {
             background-color: #30d6f2;
             transition: all 180ms;
             border-radius: 0.5rem;
