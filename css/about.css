@@ -1,0 +1,38 @@
+main {
+    margin: 5rem 0;
+}
+section.aboutImg {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+section.aboutImg h1{
+    margin-bottom: 2rem;
+}
+section.aboutImg img {
+    width: 100%;
+}
+
+section.aboutText {
+    width: 80%;
+    margin: 5rem auto;
+}
+section.aboutText h2 {
+    text-align: center;
+}
+.aboutSplit {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10rem;
+}
+.aboutLeft h2 {
+    text-align: left;
+}
+.aboutLeft span {font-style: italic;}
+.aboutLeft p.author {text-align: right;}
+.aboutSplit p {padding-bottom: 2rem;}
+.aboutRight {margin-top: 5rem;}
+.aboutRight p {
+    padding-bottom: 10rem;
+}
